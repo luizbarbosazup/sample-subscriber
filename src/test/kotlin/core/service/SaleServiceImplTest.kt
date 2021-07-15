@@ -13,7 +13,7 @@ import io.mockk.mockk
 import java.util.*
 
 @MicronautTest
-class SaleServiceImplTeste:AnnotationSpec() {
+class SaleServiceImplTest:AnnotationSpec() {
 
     val repository = mockk<SaleEntityServicePort>(relaxed = true)
     val service = SaleServiceImpl(repository)
