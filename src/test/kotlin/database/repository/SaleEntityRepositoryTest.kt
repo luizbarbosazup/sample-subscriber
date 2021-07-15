@@ -28,9 +28,9 @@ class SaleEntityRepositoryTest:AnnotationSpec() {
     }
 
     @Test
-    fun `I should be receive a insert into database`(){
+    fun `I should be receive a saleEntity when inserted into database`(){
         every {cqlSession.execute("")} answers { resultset } //será que é necessario?, funciona sem
-        val result = repository.saveSaleCql(saleEntity)
+        val result:SaleEntity = repository.saveSaleCql(saleEntity)
         result shouldBe saleEntity
     }
 
